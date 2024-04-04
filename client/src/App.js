@@ -1,6 +1,6 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import NavBar from './components/NavBar/NavBar.jsx';
-import Footer from './components/Footer/Footer.jsx';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import NavBar from './Components/NavBar/NavBar.jsx';
+import Footer from './Components/Footer/Footer.jsx';
 import AdminView from './Views/HomeView/HomeView.jsx';
 import AuthorView from './Views/AuthorView/AuthorView.jsx';
 import BooksView from './Views/BooksView/BooksView.jsx';
@@ -10,7 +10,7 @@ import HomeView from './Views/HomeView/HomeView.jsx';
 import LoginView from './Views/LoginView/LoginView.jsx';
 import NotFoundView from './Views/NotFoundView/NotFoundView.jsx';
 import WorkView from './Views/WorkView/WorkView.jsx';
-
+import './App.css'
 
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
 
   return (
     <>
-      <div className="App">
+  
         <BrowserRouter>
           <NavBar />
           <Routes>
@@ -40,7 +40,7 @@ function App() {
           </Routes>
           <Footer />
         </BrowserRouter>
-      </div>
+   
     </>
   )
 }
