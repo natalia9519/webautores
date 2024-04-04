@@ -12,7 +12,7 @@ export default function NavBar() {
   };
 
   return (
-    <section className='section-navbar'>
+    <header className='section-navbar'>
       <article className='article-navbar' >
         <figure>
         <Link to="/"> <img src={logo} alt="Logo de la pagina un libro con marcador" /></Link>
@@ -40,6 +40,6 @@ export default function NavBar() {
 
       </nav>
 
-    </section>
+    </header>
   )
 }
