@@ -1,0 +1,14 @@
+.main-not-found-view{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: url('../../assets/book-not-found.png');
+    background-size: cover;
+    background-position: center;
+}
+.main-not-found-view p{
+    color: #FFFFFF;
+    font-size: 3rem;
+}

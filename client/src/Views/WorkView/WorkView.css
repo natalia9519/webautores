@@ -1,0 +1,19 @@
+.main-work-view{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.main-work-view figure{
+    margin-top: 2rem;
+}
+.main-work-view figure img{
+    max-width:60vw;
+    height: 25rem;
+
+}
+.main-work-view article{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #1E0389;
+    font-weight: bold;
+}
