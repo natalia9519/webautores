@@ -1,0 +1,24 @@
+.section-card-book-view{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.book-card-div{
+    width:15rem;
+    padding: 1rem;
+}
+.btn-card-book{
+    background-color: #ffffff;
+    color:#1E3695;
+    width: 80px;
+    padding: 4px;
+    font-weight: bold;
+}
+.btn-card-book:hover{
+    color: #ffffff;
+    background-color:#1E3695;
+}
