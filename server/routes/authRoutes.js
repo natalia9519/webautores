@@ -7,7 +7,7 @@ router.post("/login", Login)
 router.get('/users', getAllUsers)
 router.get('/:id', getUserById)
 router.put('/:id', updateUserById)
-router.delete('/:_id', deleteUserById)
+router.delete('/:id', deleteUserById)
 
 
 export default router;

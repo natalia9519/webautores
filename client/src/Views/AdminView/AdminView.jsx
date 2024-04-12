@@ -1,8 +1,8 @@
 import React from 'react'
-import TableBook from '../../Components/TableBook/TableBook'
-import ViewAllBooks from '../../Components/ViewAllBooks/ViewAllBooks'
-import TableEvents from '../../Components/TableEvents/TableEvents'
-import ViewAllEvents from '../../Components/ViewAllEvents/ViewAllEvents'
+import TableBook from '../../Components/TableBook/TableBook.jsx'
+import ViewAllBooks from '../../Components/ViewAllBooks/ViewAllBooks.jsx'
+import TableEvents from '../../Components/TableEvents/TableEvents.jsx'
+import ViewAllEvents from '../../Components/ViewAllEvents/ViewAllEvents.jsx'
 
 export default function AdminView() {
   return (

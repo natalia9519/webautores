@@ -1,50 +1,3 @@
-// import React, { useState, useEffect } from 'react';
-// import './CardBooks.css'
-
-// export default function CardBooks() {
-
-//   const [data, setData] = useState([]);
-
-//   useEffect(() => {
-//       const fetchData = async () => {
-//           try {
-//               const response = await fetch("http://localhost:8000/books/book");
-//               if (!response.ok) {
-//                   throw new Error('Error fetching data');
-//               }
-//               const data = await response.json();
-//               setData(data);
-//           } catch (error) {
-//               console.error(error);
-//           }
-//       };
-
-//       fetchData();
-//   }, []);
-
-
-
-//   return (
-//     <section>
-//             <article className="book-card-article">
-//                 {book.map((book) => (
-//                     <div key={book.id} className="book-card-div">
-//                         <img src={book.image} alt="Room image" className="book-card-image"/>
-//                         <p>Sala: <strong>{book.name}</strong></p>
-//                         <p>Tamaño: {book.size}</p>
-//                         <p>Características: {book.description.join(', ')}</p>
-
-//                     </div>
-//                 ))}
-//             </article>
-//         </section>
-//   )
-// }
-
-
-
-
-
 import React, { useState, useEffect } from 'react';
 import './CardBooks.css';
 import Modal from 'react-modal';
@@ -76,7 +29,7 @@ export default function CardBooks() {
       try {
         const response = await fetch("http://localhost:8000/book/books");
         if (!response.ok) {
-          throw new Error('Error fetching data');
+          throw new Error('Error al obtener los datos');
         }
         const data = await response.json();
         setData(data);
