@@ -28,10 +28,10 @@ export default function TableEvents() {
         fetchData();
     }, []);
 
-    //función para añadir nuevos libros
+    //función para añadir nuevos eventos
     const [author, setAuthor] = useState('')
     const [title, setTitle] = useState('')
-    const [place, setPlace] = useState('')
+    const [places, setPlaces] = useState('')
     const [description, setDescription] = useState('')
     const [date, setDate] = useState('')
 
@@ -40,12 +40,12 @@ export default function TableEvents() {
     const store = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("http://localhost:8000/book/create", {
+            const response = await fetch("http://localhost:8000/event/create", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ author, title, place, description, date }),
+                body: JSON.stringify({ author, title, places, description, date }),
             });
             if (!response.ok) {
                 throw new Error('Error al guardar los datos');
@@ -54,7 +54,7 @@ export default function TableEvents() {
             setDatos([...datos, newData]);
             setAuthor('');
             setTitle('');
-            setPlace('');
+            setPlaces('');
             setDescription('');
             setDate('');
         } catch (error) {
@@ -74,8 +74,8 @@ export default function TableEvents() {
                             onChange={(e) => setAuthor(e.target.value)} placeholder="Nombre del autor" /><br />
                         <input type="text" value={title}
                             onChange={(e) => setTitle(e.target.value)} placeholder="Titulo del evento" /><br />
-                        <input type="text" value={place}
-                            onChange={(e) => setPlace(e.target.value)} placeholder="Lugar del evento" /><br />
+                        <input type="text" value={places}
+                            onChange={(e) => setPlaces(e.target.value)} placeholder="Lugar del evento" /><br />
                         <input type="text" value={description}
                             onChange={(e) => setDescription(e.target.value)} placeholder="Descripción del evento" /><br />
                         <input type="text" value={date}

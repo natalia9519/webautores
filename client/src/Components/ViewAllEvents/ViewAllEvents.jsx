@@ -21,7 +21,7 @@ export default function ViewAllEvents() {
 // Función para eliminar un evento
   const deleteBlog = async (id) => {
     try {
-      const response = await fetch("http://localhost:8000/event/${id}", {
+      const response = await fetch(`http://localhost:8000/event/${id}`, {
         method: 'DELETE',
       });
 
@@ -61,12 +61,12 @@ export default function ViewAllEvents() {
                 <tr key={id.id}>
                   <td> {id.title} </td>
                   <td className='table-responsive'> {id.author} </td>
-                  <td className='table-responsive'> {id.place} </td>
+                  <td className='table-responsive'> {id.places} </td>
                   <td className='table-responsive'> {id.description} </td>
                   <td className='table-responsive'> {id.date} </td>
                   <td className="btn-table">
                     <Link to={`/EditRooms/${id.id}`} className='btn btn-info'><i className="fas fa-edit"></i></Link>
-                    <button onClick={() => deleteBlog(id.id)} className='btn btn-danger'><i className="fas fa-trash-alt"></i></button>
+                    <button onClick={() => deleteBlog(id._id)} className='btn btn-danger'><i className="fas fa-trash-alt"></i></button>
                   </td>
                 </tr>
               ))}
