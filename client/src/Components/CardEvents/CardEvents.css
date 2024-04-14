@@ -1,0 +1,14 @@
+.section-card-event{
+    width:98%;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.article-card-event{
+    width: 95%;
+    background-color: #1E3695;
+    padding: 20px;
+    margin-top: 2rem;
+    color: #ffffff;
+}
