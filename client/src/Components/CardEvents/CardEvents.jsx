@@ -37,7 +37,7 @@ export default function CardEvents() {
   return (
     
       <section className="section-card-event">
-      <button onClick={handleOrderChange}>Ordenar por fecha</button> 
+      <button onClick={handleOrderChange} className='btn-card-event'>Ordenar por fecha</button> 
 
         {data.map((event) => (
           <article key={event.id} className="article-card-event">
