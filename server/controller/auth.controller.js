@@ -40,7 +40,7 @@ export const Login = async (req, res) => {
 }
 
 export const Register = async (req, res) => {
-    const { username, password } = req.body;
+    const { username, password, email } = req.body;
     try {
         const existingUsername = await User.findOne({ username: username });
         if (existingUsername) {
@@ -52,7 +52,8 @@ export const Register = async (req, res) => {
 
         const newUser = new User({
             username: username,
-            password: hashPassword
+            password: hashPassword,
+            email: email,
         });
 
         await newUser.save();
