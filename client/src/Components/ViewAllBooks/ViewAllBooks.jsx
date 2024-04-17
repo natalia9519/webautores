@@ -54,7 +54,7 @@ export default function ViewAllBooks() {
                 <th className='table-responsive'>Editorial</th>
                 <th className='table-responsive'>Año de publicación</th>
                 <th className='table-responsive'>ISBN</th>
-                <th>Actiones</th>
+                <th>Acciones</th>
               </tr>
             </thead>
             <tbody>

@@ -53,7 +53,7 @@ export default function ViewAllEvents() {
                 <th className='table-responsive'>Lugar del evento</th>
                 <th className='table-responsive'>Descripción del evento</th>
                 <th className='table-responsive'>Fecha del evento</th>
-                <th>Actiones</th>
+                <th>Acciones</th>
               </tr>
             </thead>
             <tbody>

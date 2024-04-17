@@ -80,7 +80,7 @@ export default function TableBook() {
                         <input type="text" value={title}
                             onChange={(e) => setTitle(e.target.value)} placeholder="Titulo del libro" /><br />
                         <input type="text" value={pages}
-                            onChange={(e) => setPages(e.target.value)} placeholder="Numero de páginas" /><br />
+                            onChange={(e) => setPages(e.target.value)} placeholder="Número de páginas" /><br />
                         <input type="text" value={editorial}
                             onChange={(e) => setEditorial(e.target.value)} placeholder="Nombre de la editorial" /><br />
                         <input type="text" value={publicationyear}

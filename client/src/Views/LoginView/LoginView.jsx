@@ -1,91 +1,3 @@
-// import React, { useState } from 'react';
-// import './LoginView.css'
-// import logo from '../../assets/book.png'
-// export default function LoginView() {
-//   const [email, setEmail] = useState('');
-//   const [password, setPassword] = useState('');
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-
-//     // Validar el formato del email
-//     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-//       alert('El email no es válido');
-//       return;
-//     }
-
-//     // Validar la longitud del nombre y contraseña
-//     if (email.length < 1 || email.length > 100 || password.length < 8 || password.length > 40) {
-//       alert('El email debe tener entre 1 y 100 caracteres y la contraseña entre 8 y 40 caracteres');
-//       return;
-//     }
-
-//     // Validar que los campos ocultos no estén cumplimentados
-//     if (document.querySelector('input[name="botField"]').value || document.querySelector('input[name="csrfField"]').value) {
-//       alert('No se permite el envío de campos ocultos');
-//       return;
-//     }
-
-//     // Realizar la petición HTTP al servidor
-//     const response = await fetch('http://localhost:8000/user/login', {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//       body: JSON.stringify({ email, password }),
-//     });
-
-//     const data = await response.json();
-
-//     if (data.success) {
-//       // Redirigir al usuario a la página de inicio de sesión exitosa
-//     } else {
-//       alert(data.message);
-//     }
-//   };
-
-//   return (
-//     <main className='form-login-view'>
-
-//       <form onSubmit={handleSubmit} className='form-login'>
-//         <img src={logo} alt="logo de la página" className='logo-form'/>
-//         <label>
-//           Email:
-//           <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-//         </label>
-//         <label>
-//           Contraseña:
-//           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-//         </label>
-//         <input type="hidden" name="botField" />
-//         <input type="hidden" name="csrfField" />
-//         <button type="submit">Iniciar sesión</button>
-//       </form>
-
-//     </main>
-//   );
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import React, { useState } from 'react';
 import './LoginView.css'
 import logo from '../../assets/book.png'
@@ -146,7 +58,7 @@ export default function LoginView() {
   return (
     <main className='form-login-view'>
 
-      <form onSubmit={handleSubmit} className='form-login'>
+      <form onSubmit={handleSubmit} className='form'>
         <img src={logo} alt="logo de la página" className='logo-form'/>
         <label>
           Email:

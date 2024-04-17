@@ -5,7 +5,7 @@
 
 }
 
-.form-login {
+.form {
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
@@ -14,13 +14,13 @@
     width: 25rem;
     color: #ffffff;
     line-height: 2;
-    height: 20rem;
+    min-height: 20rem;
     padding: 20px;
     font-size: 20px;
     justify-content: center;
 }
 
-.form-login input {
+.form input {
     width: 15rem;
 }
 
