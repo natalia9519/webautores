@@ -7,6 +7,7 @@ export default function LoginView() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [role, setRole] = useState(null);
+  const [username, setUsername] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -42,6 +43,10 @@ export default function LoginView() {
 
     if (data.success) {
       setRole(data.role);
+      setUsername(data.username);
+      // Guardar los datos en localStorage
+      localStorage.setItem('username', data.username);
+      localStorage.setItem('role', data.role);
     } else {
       alert(data.message);
     }

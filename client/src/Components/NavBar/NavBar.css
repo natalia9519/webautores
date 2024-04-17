@@ -66,6 +66,32 @@
     display: none;
 }
 
+.fa-sign-out-alt{
+    background-color: none;
+    color:#000000;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.nav-links{
+    padding: 15px;
+    display: flex;
+    color:#000000;
+    font-weight: bold;
+
+}
+
+.nav-links  a{
+
+    color: #000000;
+}
+
+.nav-links  a:hover {
+    color: #FFFFFF;
+    cursor: pointer;
+
+}
 
 @media screen and (max-width:1000px) {
 
@@ -117,6 +143,5 @@
     .hamburguer.active ul {
         height: auto;
     }
-
 
 }

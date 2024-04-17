@@ -16,11 +16,11 @@ import './App.css'
 
 function App() {
 
-  // const checkAuth = (roles) => {
-  //   const userRole = localStorage.getItem('role');
-  //   return userRole && roles.includes(userRole);
-  // };
-  // const redirectToLogin = () => <Navigate to="/home-view" replace />;
+   const checkAuth = (roles) => {
+     const userRole = localStorage.getItem('role');
+     return userRole && roles.includes(userRole);
+   };
+   const redirectToLogin = () => <Navigate to="/" replace />;
 
   return (
     <>
@@ -29,9 +29,10 @@ function App() {
           <NavBar />
           <Routes>
             <Route index element={<HomeView />} />
-          {/* <Route path="/our-dream" element={checkAuth(['admin']) ? <AdminView /> : redirectToLogin()} /> */}
-            <Route path="/our-dream" element={<AdminView />} />
-            <Route path="/user-manage" element={<SuperAdminView />} />  
+           <Route path="/our-dream" element={checkAuth(['user']) ? <AdminView /> : redirectToLogin()} /> 
+          {/*  <Route path="/our-dream" element={<AdminView />} />*/}
+          <Route path="/user-manage" element={checkAuth(['admin']) ? <SuperAdminView /> : redirectToLogin()} />  
+            {/* <Route path="/user-manage" element={<SuperAdminView />} />   */}
             <Route path="/Autores" element={<AuthorView />} />
             <Route path="/Libros" element={<BooksView />} />
             <Route path="/Contactanos" element={<ContactView />} />            
