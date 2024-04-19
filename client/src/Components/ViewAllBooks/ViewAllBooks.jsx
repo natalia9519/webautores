@@ -21,7 +21,7 @@ export default function ViewAllBooks() {
 // Función para eliminar un libro
   const deleteBlog = async (id) => {
     try {
-      const response = await fetch("http://localhost:8000/book/${id}", {
+      const response = await fetch(`http://localhost:8000/book/${id}`, {
         method: 'DELETE',
       });
 
@@ -67,7 +67,7 @@ export default function ViewAllBooks() {
                   <td className='table-responsive'> {id.publicationyear} </td>
                   <td className='table-responsive'> {id.ISBN} </td>
                   <td className="btn-table">
-                    <Link to={`/EditRooms/${id.id}`} className='btn btn-info'><i className="fas fa-edit"></i></Link>
+                    <Link to={`/EditBook/${id._id}`} className='btn btn-info'><i className="fas fa-edit"></i></Link>
                     <button onClick={() => deleteBlog(id._id)} className='btn btn-danger'><i className="fas fa-trash-alt"></i></button>
                   </td>
                 </tr>

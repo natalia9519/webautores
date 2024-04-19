@@ -11,6 +11,8 @@ import HomeView from './Views/HomeView/HomeView.jsx';
 import LoginView from './Views/LoginView/LoginView.jsx';
 import NotFoundView from './Views/NotFoundView/NotFoundView.jsx';
 import WorkView from './Views/WorkView/WorkView.jsx';
+import EditBook from './Views/EditBook/EditBook.jsx';
+import EditEvent from './Views/EditEvent/EditEvent.jsx';
 import './App.css'
 
 
@@ -29,6 +31,8 @@ function App() {
           <NavBar />
           <Routes>
             <Route index element={<HomeView />} />
+            <Route path="/EditBook/:id" element={checkAuth(['user']) ? <EditBook /> : redirectToLogin()} /> 
+            <Route path="/EditEvent/:id" element={checkAuth(['user']) ? <EditEvent /> : redirectToLogin()} /> 
            <Route path="/our-dream" element={checkAuth(['user']) ? <AdminView /> : redirectToLogin()} /> 
           {/*  <Route path="/our-dream" element={<AdminView />} />*/}
           <Route path="/user-manage" element={checkAuth(['admin']) ? <SuperAdminView /> : redirectToLogin()} />  

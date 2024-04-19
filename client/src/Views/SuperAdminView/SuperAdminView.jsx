@@ -114,7 +114,7 @@ const deleteBlog = async (id) => {
         )}
     </section>
     <section className='section-view-books'>
-        <article className='row'>
+        <article className='row '>
                 <table className='table-view-books'>
                     <thead className='table-primary'>
                         <tr>

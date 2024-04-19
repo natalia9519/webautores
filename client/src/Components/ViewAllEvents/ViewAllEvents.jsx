@@ -65,7 +65,7 @@ export default function ViewAllEvents() {
                   <td className='table-responsive'> {id.description} </td>
                   <td className='table-responsive'> {id.date} </td>
                   <td className="btn-table">
-                    <Link to={`/EditRooms/${id.id}`} className='btn btn-info'><i className="fas fa-edit"></i></Link>
+                    <Link to={`/EditEvent/${id.id}`} className='btn btn-info'><i className="fas fa-edit"></i></Link>
                     <button onClick={() => deleteBlog(id._id)} className='btn btn-danger'><i className="fas fa-trash-alt"></i></button>
                   </td>
                 </tr>

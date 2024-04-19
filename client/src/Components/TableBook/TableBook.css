@@ -1,27 +1,61 @@
-.section-table-book, .section-view-books{
+.section-table-book, .section-view-books {
     margin-top: 3rem;
     width: 95%;
     color: #1E3695;
     margin-left: 5%;
 }
-.form-table-book{
-    width:95%;
+
+.form-table-book {
+    width: 95%;
 }
-.form-table-book input{
-    width:95%;
+
+.form-table-book input {
+    width: 95%;
     padding: 7px;
-    margin:0.5rem;
+    margin: 0.5rem;
     color: #000000;
 }
-.btn-primary{
+
+.btn-primary {
     color: #FFFFFF;
     border-radius: 20px;
     padding: 5px;
     background-color: #1E3695;
     font-size: 20px;
 }
-.btn-primary:hover{
+
+.btn-primary:hover {
     background-color: #FFFFFF;
     color: #1E3695;
     cursor: pointer;
+}
+.table-view-books  {
+    margin-bottom: 2rem;
+}
+.btn-danger{
+    background-color: transparent;
+    color: #1E3695;
+    cursor: pointer;
+    border: none;
+    height: 35px;
+    width:35px;
+}
+@media (max-width: 800px) {
+    .table-view-books thead th {
+        display: block;
+
+    }
+    .table-view-books tbody tr {
+
+        max-width: 20rem;
+    }
+    .table-view-books tbody td {
+        display: block;
+        max-width: 20rem;
+    }
+    .table-view-books tbody td:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+    }
 }

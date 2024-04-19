@@ -78,7 +78,7 @@ export default function TableEvents() {
                             onChange={(e) => setPlaces(e.target.value)} placeholder="Lugar del evento" /><br />
                         <input type="text" value={description}
                             onChange={(e) => setDescription(e.target.value)} placeholder="Descripción del evento" /><br />
-                        <input type="text" value={date}
+                        <input type="date" value={date}
                             onChange={(e) => setDate(e.target.value)} placeholder="Fecha del evento" /><br />                          
                         <button type='submit' className='btn btn-primary'>Añadir evento</button>
                     </form>
