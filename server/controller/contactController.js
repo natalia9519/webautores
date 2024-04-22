@@ -79,7 +79,7 @@ export const updateContactById = async (req, res) => {
 
 // Controlador para eliminar un mensaje de contacto por su ID
 export const deleteContactById = async (req, res) => {
-  const id = req.params._id;
+  const id = req.params.id;
   try {
     const deletedContact = await Contact.findByIdAndDelete(id);
     if (!deletedContact) {

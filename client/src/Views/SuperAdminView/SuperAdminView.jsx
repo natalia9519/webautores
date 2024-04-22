@@ -132,7 +132,7 @@ const deleteBlog = async (id) => {
                                 <td className='table-responsive'> {id.password} </td>
                                 <td className='table-responsive'> {id.role} </td>
                                 <td className="btn-table">
-                                    <Link to={`/EditRooms/${id._id}`} className='btn btn-info'><i className="fas fa-edit"></i></Link>
+                                    <Link to={`/EditUser/${id._id}`} className='btn btn-info'><i className="fas fa-edit"></i></Link>
                                     <button onClick={ ()=> deleteBlog(id._id)} className='btn btn-danger'><i className="fas fa-trash-alt"></i></button>
                                 </td>
 

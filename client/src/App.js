@@ -13,6 +13,7 @@ import NotFoundView from './Views/NotFoundView/NotFoundView.jsx';
 import WorkView from './Views/WorkView/WorkView.jsx';
 import EditBook from './Views/EditBook/EditBook.jsx';
 import EditEvent from './Views/EditEvent/EditEvent.jsx';
+import EditUser from './Views/EditUser/EditUser.jsx';
 import './App.css'
 
 
@@ -35,6 +36,7 @@ function App() {
             <Route path="/EditEvent/:id" element={checkAuth(['user']) ? <EditEvent /> : redirectToLogin()} /> 
            <Route path="/our-dream" element={checkAuth(['user']) ? <AdminView /> : redirectToLogin()} /> 
           {/*  <Route path="/our-dream" element={<AdminView />} />*/}
+          <Route path="/EditUser/:id" element={checkAuth(['admin']) ? <EditUser /> : redirectToLogin()} />          
           <Route path="/user-manage" element={checkAuth(['admin']) ? <SuperAdminView /> : redirectToLogin()} />  
             {/* <Route path="/user-manage" element={<SuperAdminView />} />   */}
             <Route path="/Autores" element={<AuthorView />} />
