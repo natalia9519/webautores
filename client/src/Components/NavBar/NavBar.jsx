@@ -110,7 +110,7 @@ export default function NavBar() {
           <div className='nav-links'>
             {role === 'user' && <Link to="/our-dream">Mi página</Link>}
             {role === 'admin' && <Link to="/user-manage">PANEL DE CONTROL </Link>}
-            <button onClick={handleLogout}><i class="fas fa-sign-out-alt"></i></button>
+            <button onClick={handleLogout}><i className="fas fa-sign-out-alt"></i></button>
           </div>
         )}
       </nav>
