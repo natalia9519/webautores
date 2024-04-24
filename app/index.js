@@ -59,7 +59,8 @@ app.use("/user", authRoutes);
 app.use("/event", eventRoutes);
 app.use("/contact", contactRoutes);
 
-app.use(express.static(path.join(__dirname, 'client', 'dist')));
+//app.use(express.static(path.join(__dirname, 'client', 'dist')));
+app.use(express.static(path.join('client', 'public')));
 
 app.get('*', (req, res) => {
 //  res.sendFile(path.join(__dirname, 'client', 'public', 'index.html'));
