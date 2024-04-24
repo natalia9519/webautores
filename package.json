@@ -16,7 +16,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start:prod": "node dist/src/index.js",
+    "start": "node app/index.js","start:prod": "node dist/src/main.js",
     "build": "npm install && npm install --prefix client && npm run build --prefix client",
     "dev": "nodemon app/index.js",
     "test": "mocha --exit --recursive tests"
