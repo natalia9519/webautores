@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "chai": "^5.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
@@ -9,6 +10,22 @@
     "mongoose": "^8.2.4",
     "validator": "^13.11.0"
   },
+  "devDependencies": {
+    "mocha": "^10.1.0",
+    "mocha-esm": "^2.0.0"
+  },
   "main": "index.js",
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "test": "mocha --exit --recursive __tests__",
+    "start": "node app/index.js",
+    "build": "npm install && npm install --prefix client && npm run build --prefix client",
+"dev": "nodemon app/index.js"
+  },
+  "mocha": {
+    "extensions": ["js"],
+    "esm": {
+      "node": "esm"
+    }
+  }
 }
