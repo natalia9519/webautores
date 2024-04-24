@@ -17,9 +17,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "mocha --exit --recursive __tests__",
+ 
     "start": "node app/index.js",
-    "build": "npm install && npm install --prefix client && npm run build --prefix client"
+    "build": "npm install && npm install --prefix client && npm run build --prefix client",
+    "dev": "nodemon app/index.js"
   },
   "mocha": {
     "extensions": ["js"],
