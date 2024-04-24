@@ -100,6 +100,14 @@ export default function EditBook() {
           placeholder="ISBN del libro"
         />
         <br />
+        <input
+          type="text"
+          name="image"
+          value={book.image || ''}
+          onChange={handleChange}
+          placeholder="Url de la imagen"
+        />
+        <br />
         <button type="submit" className="btn btn-primary">
           Guardar cambios
         </button>

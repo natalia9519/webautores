@@ -2,7 +2,7 @@ import Book from "../model/bookModel.js";
 
 //Controlador agregar nuevo libro
 export const bookCreate = async (req, res) => {
-    const { author, title, pages, editorial, publicationyear, ISBN } = req.body;
+    const { author, title, pages, editorial, publicationyear, ISBN, image } = req.body;
     try {
         const existingBookname = await Book.findOne({ title: title })
         if (existingBookname) {
@@ -15,6 +15,7 @@ export const bookCreate = async (req, res) => {
             editorial: editorial,
             publicationyear: publicationyear,
             ISBN: ISBN,
+            image:image,
 
         })
         await credentials.save()
@@ -52,9 +53,9 @@ export const getBookById = async (req, res) => {
 // Controlador para actualizar un registro por su ID
 export const updateBookById = async (req, res) => {
     const id  = req.params.id;
-    const { author, title, pages, editorial, publicationyear, ISBN } = req.body;
+    const { author, title, pages, editorial, publicationyear, ISBN, image } = req.body;
     try {
-        const updatedBook = await Book.findByIdAndUpdate(id, { author, title, pages, editorial, publicationyear, ISBN }, { new: true });
+        const updatedBook = await Book.findByIdAndUpdate(id, { author, title, pages, editorial, publicationyear, ISBN, image }, { new: true });
         if (!updatedBook) {
             return res.status(404).json({ message: "Libro no encontrado" });
         }

@@ -37,7 +37,7 @@ export default function TableBook() {
     const [editorial, setEditorial] = useState('')
     const [publicationyear, setPublicationYear] = useState('')
     const [ISBN, setISBN] = useState('')
-
+    const [image, setImage] = useState('')
     
     const store = async (e) => {
         e.preventDefault();
@@ -47,7 +47,7 @@ export default function TableBook() {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ author, title, pages, editorial, publicationyear, ISBN }),
+                body: JSON.stringify({ author, title, pages, editorial, publicationyear, ISBN, image }),
             });
             if (!response.ok) {
                 throw new Error('Error al guardar los datos');
@@ -60,6 +60,7 @@ export default function TableBook() {
             setEditorial('');
             setPublicationYear('');
             setISBN('');
+            setImage('');
         } catch (error) {
             console.error(error);
         }
@@ -86,7 +87,9 @@ export default function TableBook() {
                         <input type="text" value={publicationyear}
                             onChange={(e) => setPublicationYear(e.target.value)} placeholder="Año publicado" /><br />
                         <input type="text" value={ISBN}
-                            onChange={(e) => setISBN(e.target.value)} placeholder="Número de ISBN" /><br />                            
+                            onChange={(e) => setISBN(e.target.value)} placeholder="Número de ISBN" /><br />   
+                         <input type="text" value={image}
+                            onChange={(e) => setImage(e.target.value)} placeholder="Url de imagen" /><br />                            
                         <button type='submit' className='btn btn-primary'>Añadir libro</button>
                     </form>
                 )}
