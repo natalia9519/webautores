@@ -36,7 +36,6 @@
 
 
 
-
 import { db } from "./database/db.js";
 import cors from 'cors';
 import express from "express";
@@ -59,19 +58,18 @@ app.use("/user", authRoutes);
 app.use("/event", eventRoutes);
 app.use("/contact", contactRoutes);
 
-//app.use(express.static(path.join(__dirname, 'client', 'dist')));
-app.use(express.static(path.join('client', 'dist')));
+app.use(express.static(path.join(__dirname, '..', 'client', 'dist')));
 
 app.get('*', (req, res) => {
-//  res.sendFile(path.join(__dirname, 'client', 'public', 'index.html'));
-  res.sendFile(path.join('client', 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, '..', 'client', 'public', 'index.html'));
 });
 
-export { app };
-
-const PORT = 8000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+db().then(() => {
+  const PORT = 8000;
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}).catch((error) => {
+  console.log(error);
+  process.exit(1);
 });
-
-db();
