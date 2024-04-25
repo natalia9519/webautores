@@ -1,0 +1,36 @@
+.table-view-books {
+    width: 95%;
+  }
+  
+  .table-responsive {
+    margin: 0 1rem;
+  }
+  
+  .table-view-books .table-primary tr th {
+    margin: 0 1rem;
+    background-color: #1E3695;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .table-view-books tr td {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .table-view-books tr:nth-child(even) {
+    background-color: #1E369555; 
+  }
+  
+  .table-view-books tr:nth-child(even)  {
+    color: #ffffff; 
+  }
+  
+  .table-view-books tr:nth-child(odd) {
+    background-color: #ffffff; 
+  }
+  
+  .table-view-books tr:nth-child(odd) td:nth-child(even) {
+    color: #1E3695; 
+  }
+

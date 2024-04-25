@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "chai": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.2.4",
+    "validator": "^13.11.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.4.0"
+  },
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app/index.js","start:prod": "node dist/src/index.js",
+    "build": "npm install && npm install --prefix client && npm run build --prefix client",
+    "dev": "nodemon app/index.js",
+    "test": "mocha --exit --recursive tests"
+  },
+  "mocha": {
+    "extensions": [
+      "js"
+    ],
+    "esm": {
+      "node": "esm"
+    }
+  }
+}

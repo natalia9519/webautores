@@ -1,0 +1,147 @@
+.section-navbar {
+    height: 25vh;
+}
+
+.article-navbar {
+    background-color: #1E0389;
+    color: #FFFFFF;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.article-navbar figure {
+    width: 30%;
+
+}
+
+.article-navbar h2 {
+    align-items: center;
+    display: flex;
+}
+
+.article-navbar figure img {
+    width: 25%;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.nav-styles {
+    background-color: #3CE8FF;
+    color: #000000 ;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-height: 3rem;
+    z-index: 200;
+    position: relative;
+}
+
+
+.nav-styles ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.nav-styles ul li {
+    margin: 1rem 5rem;
+    font-weight: bold;
+
+}
+.nav-styles ul li a{
+
+    color: #000000;
+}
+
+.nav-styles ul li a:hover {
+    color: #FFFFFF;
+    cursor: pointer;
+
+}
+
+.hamburguer {
+    display: none;
+}
+
+.fa-sign-out-alt{
+    background-color: none;
+    color:#000000;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.nav-links{
+    padding: 15px;
+    display: flex;
+    color:#000000;
+    font-weight: bold;
+
+}
+
+.nav-links  a{
+
+    color: #000000;
+}
+
+.nav-links  a:hover {
+    color: #FFFFFF;
+    cursor: pointer;
+
+}
+
+@media screen and (max-width:1000px) {
+
+
+    .article-navbar {
+        font-size: 1rem;
+    }
+
+    .article-navbar figure {
+        width: 30%;
+    }
+
+    .article-navbar figure img {
+        width: 40%;
+    }
+
+    .nav-desktop {
+        display: none;
+    }
+
+    .hamburguer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hamburguer i {
+        color: #000000;
+        font-size: 30px;
+
+    }
+
+    .hamburguer ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hamburguer ul li {
+        margin: 1rem 0;
+        font-weight: bold;
+    }
+
+    .hamburguer ul li:hover {
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+
+    .hamburguer.active ul {
+        height: auto;
+    }
+
+}

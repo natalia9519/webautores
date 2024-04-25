@@ -1,0 +1,29 @@
+.footer{
+    background-color: #1E0389;
+    color: #FFFFFF;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    min-height: 13vh;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer p{
+    padding: 0 2rem;
+}
+.footer p a{
+    color: #FFFFFF;
+}
+.footer p a:hover{
+    color: #000000;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1000px){
+
+    .footer p{
+     padding:2rem;
+    }
+
+}
