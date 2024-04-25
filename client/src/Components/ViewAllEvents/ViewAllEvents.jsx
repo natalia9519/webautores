@@ -8,7 +8,7 @@ export default function ViewAllEvents() {
   // Función para obtener los datos de los eventos
   const fetchData = async () => {
     try {
-      const response = await fetch("http://localhost:8000/event/events");
+      const response = await fetch("https://webautores.onrender.com/event/events");
       if (!response.ok) {
         throw new Error('Error al obtener los datos');
       }
@@ -21,7 +21,7 @@ export default function ViewAllEvents() {
 // Función para eliminar un evento
   const deleteBlog = async (id) => {
     try {
-      const response = await fetch(`http://localhost:8000/event/${id}`, {
+      const response = await fetch(`https://webautores.onrender.com/event/${id}`, {
         method: 'DELETE',
       });
 

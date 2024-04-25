@@ -14,7 +14,7 @@ export default function TableEvents() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch("http://localhost:8000/event/events");
+                const response = await fetch("https://webautores.onrender.com/event/events");
                 if (!response.ok) {
                     throw new Error('Error al obtener los datos');
                 }
@@ -40,7 +40,7 @@ export default function TableEvents() {
     const store = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("http://localhost:8000/event/create", {
+            const response = await fetch("https://webautores.onrender.com/event/create", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

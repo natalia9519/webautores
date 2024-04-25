@@ -8,7 +8,7 @@ export default function ViewAllBooks() {
   // Función para obtener los datos de los libros
   const fetchData = async () => {
     try {
-      const response = await fetch("http://localhost:8000/book/books");
+      const response = await fetch("https://webautores.onrender.com/book/books");
       if (!response.ok) {
         throw new Error('Error al obtener los datos');
       }
@@ -21,7 +21,7 @@ export default function ViewAllBooks() {
 // Función para eliminar un libro
   const deleteBlog = async (id) => {
     try {
-      const response = await fetch(`http://localhost:8000/book/${id}`, {
+      const response = await fetch(`https://webautores.onrender.com/book/${id}`, {
         method: 'DELETE',
       });
 

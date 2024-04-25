@@ -27,7 +27,7 @@ export default function CardBooks() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:8000/book/books");
+        const response = await fetch("https://webautores.onrender.com/book/books");
         if (!response.ok) {
           throw new Error('Error al obtener los datos');
         }

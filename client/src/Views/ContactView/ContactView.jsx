@@ -54,7 +54,7 @@ export default function ContactView() {
       message
     };
 
-    fetch('http://localhost:8000/contact/create', {
+    fetch('https://webautores.onrender.com/contact/create', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

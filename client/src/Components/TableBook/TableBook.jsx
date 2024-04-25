@@ -16,7 +16,7 @@ export default function TableBook() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch("http://localhost:8000/book/books");
+                const response = await fetch("https://webautores.onrender.com/book/books");
                 if (!response.ok) {
                     throw new Error('Error al obtener los datos');
                 }
@@ -42,7 +42,7 @@ export default function TableBook() {
     const store = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("http://localhost:8000/book/create", {
+            const response = await fetch("https://webautores.onrender.com/book/create", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
