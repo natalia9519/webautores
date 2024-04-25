@@ -10,11 +10,7 @@ export default function EditEvent() {
     useEffect(() => {
       const fetchEvent = async () => {
         try {
-<<<<<<< HEAD
-          const response = await fetch(`http://localhost:8000/event/events/${id}`);
-=======
           const response = await fetch(`https://webautores.onrender.com/event/events/${id}`);
->>>>>>> develop
           if (!response.ok) {
             throw new Error('Error al obtener los datos');
           }
@@ -35,11 +31,7 @@ export default function EditEvent() {
     const handleSubmit = async (e) => {
       e.preventDefault();
       try {
-<<<<<<< HEAD
-        const response = await fetch(`http://localhost:8000/event/${id}`, {
-=======
         const response = await fetch(`https://webautores.onrender.com/event/${id}`, {
->>>>>>> develop
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',

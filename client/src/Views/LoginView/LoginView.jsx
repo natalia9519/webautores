@@ -36,11 +36,7 @@ const LoginView = () => {
     }
 
     // Realizar la petición HTTP al servidor
-<<<<<<< HEAD
-    const response = await fetch('http://localhost:8000/user/login', {
-=======
     const response = await fetch('https://webautores.onrender.com/user/login', {
->>>>>>> develop
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

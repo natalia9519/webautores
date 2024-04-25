@@ -10,11 +10,7 @@ export default function EditBook() {
     useEffect(() => {
       const fetchBook = async () => {
         try {
-<<<<<<< HEAD
-          const response = await fetch(`http://localhost:8000/book/books/${id}`);
-=======
           const response = await fetch(`https://webautores.onrender.com/book/books/${id}`);
->>>>>>> develop
           if (!response.ok) {
             throw new Error('Error al obtener los datos');
           }
@@ -35,11 +31,7 @@ export default function EditBook() {
     const handleSubmit = async (e) => {
       e.preventDefault();
       try {
-<<<<<<< HEAD
-        const response = await fetch(`http://localhost:8000/book/${id}`, {
-=======
         const response = await fetch(`https://webautores.onrender.com/book/${id}`, {
->>>>>>> develop
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
