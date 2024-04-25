@@ -10,7 +10,11 @@ export default function EditUser() {
   useEffect(() => {
     const fetchEvent = async () => {
       try {
+<<<<<<< HEAD
         const response = await fetch(`http://localhost:8000/user/users/${id}`);
+=======
+        const response = await fetch(`https://webautores.onrender.com/user/users/${id}`);
+>>>>>>> develop
         if (!response.ok) {
           throw new Error('Error al obtener los datos');
         }
@@ -31,7 +35,11 @@ export default function EditUser() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+<<<<<<< HEAD
       const response = await fetch(`http://localhost:8000/user/${id}`, {
+=======
+      const response = await fetch(`https://webautores.onrender.com/user/${id}`, {
+>>>>>>> develop
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

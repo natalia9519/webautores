@@ -9,7 +9,11 @@ export default function HomeView() {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
+<<<<<<< HEAD
     fetch('http://localhost:8000/event/events')
+=======
+    fetch('https://webautores.onrender.com/event/events')
+>>>>>>> develop
       .then(response => response.json())
       .then(data => setEvents(data))
       .catch(error => {

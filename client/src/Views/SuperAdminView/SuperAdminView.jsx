@@ -11,7 +11,11 @@ export default function SuperAdminView() {
     useEffect(() => {
         const fetchData = async () => {
             try {
+<<<<<<< HEAD
                 const response = await fetch("http://localhost:8000/user/users");
+=======
+                const response = await fetch("https://webautores.onrender.com/user/users");
+>>>>>>> develop
                 if (!response.ok) {
                     throw new Error('Error al obtener los datos');
                 }
@@ -34,7 +38,11 @@ export default function SuperAdminView() {
     const store = async (e) => {
         e.preventDefault();
         try {
+<<<<<<< HEAD
             const response = await fetch("http://localhost:8000/user/register", {
+=======
+            const response = await fetch("https://webautores.onrender.com/user/register", {
+>>>>>>> develop
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -64,7 +72,11 @@ export default function SuperAdminView() {
 //eliminar una sala
 const deleteBlog = async (id) => {
     try {
+<<<<<<< HEAD
       const response = await fetch(`http://localhost:8000/user/${id}`, {
+=======
+      const response = await fetch(`https://webautores.onrender.com/user/${id}`, {
+>>>>>>> develop
         method: 'DELETE',
       });
   
@@ -81,7 +93,11 @@ const deleteBlog = async (id) => {
   };
   const fetchData = async () => {
     try {
+<<<<<<< HEAD
         const response = await fetch("http://localhost:8000/user/users");
+=======
+        const response = await fetch("https://webautores.onrender.com/user/users");
+>>>>>>> develop
         if (!response.ok) {
             throw new Error('Error al obtener los datos');
         }

@@ -7,7 +7,11 @@ export default function ViewAllComments() {
   // Función para obtener los datos de los eventos
   const fetchData = async () => {
     try {
+<<<<<<< HEAD
       const response = await fetch("http://localhost:8000/contact/contact");
+=======
+      const response = await fetch("https://webautores.onrender.com/contact/contact");
+>>>>>>> develop
       if (!response.ok) {
         throw new Error('Error al obtener los datos');
       }
@@ -20,7 +24,11 @@ export default function ViewAllComments() {
 // Función para eliminar un comentario
   const deleteBlog = async (id) => {
     try {
+<<<<<<< HEAD
       const response = await fetch(`http://localhost:8000/contact/${id}`, {
+=======
+      const response = await fetch(`https://webautores.onrender.com/contact/${id}`, {
+>>>>>>> develop
         method: 'DELETE',
       });
 
