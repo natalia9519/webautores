@@ -52,8 +52,7 @@ Teniendo en cuenta la anterior información se podría navegar por todas las pá
 - <a href="https://trello.com/invite/b/Odq08HL7/ATTIc290e7077381ef7078e452d4e2a6554e64C4AC5B/web-autores"> Trello </a> </br> 
 - <a href="https://www.figma.com/file/4HxMQ9QQhXUo9taj4OJRXO/Authors?type=design&node-id=7%3A2&mode=design&t=3B0r51SKjjfF9tHU-1"> Figma </a> </br>
 - <a href="https://github.com/natalia9519/webautores.git">GitHub</a> </br>
-
-- Deploy
+- <a href="https://webautores-5ky3.vercel.app/">Deploy</a>
 
 ## Licencia
 
@@ -65,3 +64,6 @@ Las fuentes utilizadas en este proyecto estan sujetas a licencia SIL con Copyrig
 
 Se han hecho varios test para el backend para el controlador auth.controller, bookController, eventController y commentController.
 ![imagen del test de backend](./client/public/test1.png)
+
+## Auditoria de la página
+Documento drive <a href="https://drive.google.com/file/d/1j24be0_l-XN2DgNLuEJHKNor_WGTlaqV/view?usp=sharing">Auditoria</a>
